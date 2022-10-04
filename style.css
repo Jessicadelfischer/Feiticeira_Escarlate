@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
+
+body {
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: url("./img/background.png") no-repeat center;
+  background-size: cover;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+.divLeft {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.divRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fumaca_red {
+  width: 1200px;
+  z-index: 97;
+
+  animation: fumacaSugindo 10s ease-in-out infinite;
+}
+.fumacaPrin {
+  position: absolute;
+  width: 3000px;
+  filter: brightness(2) contrast(1);
+  z-index: 99;
+  animation: fumaca 25s linear infinite;
+}
+
+.circle {
+  position: absolute;
+  width: 600px;
+  animation: rotate-center 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 0 yellow) brightness(150%);
+}
+
+.circleInner {
+  animation: rotate 4s ease-in-out infinite;
+}
+
+.wanda {
+  position: absolute;
+  width: 300px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.animation-wanda {
+  animation: slide-in 3s ease-in-out infinite, up 5s ease-in-out;
+}
+
+.video {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.fogo {
+  position: absolute;
+  width: 63px;
+  margin-left: 109px;
+  margin-top: 44px;
+  filter: hue-rotate(330deg) blur(0.5px);
+  z-index: 99;
+}
+
+
+.fogo2 {
+  position: absolute;
+  width: 63px;
+  margin-left: -121px;
+  margin-top: 56px;
+  filter: hue-rotate(330deg) blur(0.5px);
+  z-index: 99;
+}
+
+.raio {
+  position: absolute;
+  width: 35px;
+  margin-top: -142px;
+  z-index: 99;
+  animation: slide-in 3s ease-in-out infinite, up 5s ease-in-out;
+  filter: contrast(3);
+  opacity: 0;
+}
+.raio2 {
+  position: absolute;
+  width: 35px;
+  margin-left: -25px;
+  margin-top: -142px;
+  z-index: 99;
+  animation: slide-in 3s ease-in-out infinite, up 5s ease-in-out;
+  filter: contrast(3);
+  opacity: 0;
+}
+
+
+.title {
+  position: absolute;
+  width: 400px;
+  margin-top: 170px;
+}
+
+.text {
+  position: absolute;
+  margin-top: 427px;
+  font-family: Carter One, sans-serif;
+  font-size: 24px;
+  color: rgb(87, 0, 0);
+}
+
+.date {
+  position: absolute;
+  margin-top: 375px;
+  font-family: Carter One, sans-serif;
+  font-size: 24px;
+  z-index: 99;
+}
+
+span {
+  z-index: 99;
+  animation: brilho 2s ease-in-out infinite;
+}
+
+span:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+span:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+span:nth-of-type(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes fumaca {
+  0% {
+    right: -50%;
+  }
+
+  50% {
+    right: 0%;
+  }
+
+  100% {
+    right: -50%;
+  }
+}
+@keyframes fumacaSugindo {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0.1;
+  }
+  75% {
+    transform: translateZ(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateZ(-1400px);
+    opacity: 0.1;
+  }
+}
+
+@keyframes rotate-center {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes up {
+  0% {
+    transform: translatey(100vh);
+  }
+
+  50% {
+    transform: translatey(0vh);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translatey(0rem);
+  }
+
+  50% {
+    transform: translatey(-2rem);
+  }
+
+  100% {
+    transform: translatey(0rem);
+  }
+}
+
+@keyframes slideSmoke {
+  0% {
+    transform: translatex(0rem);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translatex(30rem);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translatex(0rem);
+    opacity: 0.4;
+  }
+}
+@keyframes brilho {
+  0% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 12px rgb(228, 46, 46), 0 0 50px rgb(228, 46, 46),
+      0 0 100px rgb(228, 46, 46);
+  }
+  20%,
+  90% {
+    color: rgb(105, 12, 12);
+  }
+}
+
+@keyframes shine {
+  0% {
+    filter: brightness(60%);
+  }
+  50% {
+    filter: brightness(120%);
+  }
+  100% {
+    filter: brightness(60%);
+  }
+}
